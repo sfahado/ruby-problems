@@ -36,3 +36,4 @@ puts "Array 2: " + v2.to_s
 puts "Array 3: " + v3.to_s
 puts "Least Common Number: " + result.to_s
 
+
