@@ -25,7 +25,6 @@
 #                                                                X, Y and D are integers within the range [1..1,000,000,000];
 #                                              X ≤ Y.
 def solution(x, y, d)
-  total = 0
   if ((y - x) % d).eql?(0)
     (y - x) / d
   else
