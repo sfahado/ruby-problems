@@ -40,28 +40,29 @@
 #
 
 def roman_to_int(s)
-hash = {
-  'I' => 1,
-  'V' => 5,
-  'X' => 10,
-  'L' => 50,
-  'C' => 100,
-  'D' => 500,
-  'M' => 1000
-}
-number = 0
-roman = s.split('')
-i = 0
-while i < roman.length
-  if i + 1 < roman.length && hash[roman[i]] < hash[roman[i + 1]]
-    number += hash[roman[i + 1]] - hash[roman[i]]
+  hash = {
+    'I' => 1,
+    'V' => 5,
+    'X' => 10,
+    'L' => 50,
+    'C' => 100,
+    'D' => 500,
+    'M' => 1000
+  }
+  number = 0
+  roman = s.split('')
+  i = 0
+  while i < roman.length
+    if i + 1 < roman.length && hash[roman[i]] < hash[roman[i + 1]]
+      number += hash[roman[i + 1]] - hash[roman[i]]
+      i += 1
+    else
+      number += hash[roman[i]]
+    end
     i += 1
-  else
-    number += hash[roman[i]]
   end
-  i += 1
+  number
 end
-number
 
 def roman_to_int(s)
   hash = {
